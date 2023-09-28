@@ -1,0 +1,22 @@
+{
+	"info": {
+		"_postman_id": "b65768c3-2559-4445-ae40-5500443b900e",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "www.google.be",
+			"id": "0a1043f2-5df0-4f37-a90f-cd3fc9b5149d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "www.google.be"
+			},
+			"response": []
+		}
+	]
+}
