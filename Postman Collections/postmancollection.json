@@ -14,7 +14,23 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "www.google.be"
+				"url": {
+					"raw": "www.google.be/search?q=test",
+					"host": [
+						"www",
+						"google",
+						"be"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "test"
+						}
+					]
+				}
 			},
 			"response": []
 		}
