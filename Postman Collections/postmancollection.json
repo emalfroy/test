@@ -33,19 +33,6 @@
 				}
 			},
 			"response": []
-		},
-		{
-			"name": "api",
-			"id": "9891b38d-f5ed-4907-9255-3b44f0a01450",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "www.google.be"
-			},
-			"response": []
 		}
 	]
 }
