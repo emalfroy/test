@@ -30,9 +30,7 @@ jobs:
         run: |
           curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
           echo "env var ${{ vars.URLGOOGLE }}"
-          echo ${{ env.URLGOOGLE }}
           echo ${{ secrets.URL }}
-          env
           echo "done"
       - name: Login to Postman CLI
         id: loginpostman
@@ -40,6 +38,6 @@ jobs:
       - name: Run API tests
         if: steps.loginpostman.outcome == 'success'
         run: |
-          postman collection run "${{ github.workspace }}/Postman Collections/postmancollection.json" --integration-id "149296-${{ github.run_id }}" --env-var "url=${{ vars.URLGOOGLE }}"
+          postman collection run "${{ github.workspace }}/Postman Collections/postmancollection.json" --integration-id "149296-${{ github.run_id }}" --env-var "url=${{ vars.URLGOOGLE }}" "params=testsearch"
           # Lint your API using Postman CLI
           postman api lint e7f2bd00-c422-4b73-baf9-20154cd17e59 --integration-id 149296
