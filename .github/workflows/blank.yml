@@ -45,6 +45,6 @@ jobs:
       - name: Run API tests
         if: steps.loginpostman.outcome == 'success'
         run: |
-          postman collection run "${{ github.workspace }}/Postman Collections/postmancollection.json" --integration-id "149296-${{ github.run_id }}" --env-var url={{ env.URL }}
+          postman collection run "${{ github.workspace }}/Postman Collections/postmancollection.json" --integration-id "149296-${{ github.run_id }}" --env-var url=${{ secrets.URL }}
           # Lint your API using Postman CLI
           postman api lint e7f2bd00-c422-4b73-baf9-20154cd17e59 --integration-id 149296
