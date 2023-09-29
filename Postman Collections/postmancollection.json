@@ -7,6 +7,20 @@
 	"item": [
 		{
 			"name": "www.google.be",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f6cf4c7a-e328-4353-baac-290e27d62ca1",
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(300);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "0a1043f2-5df0-4f37-a90f-cd3fc9b5149d",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
