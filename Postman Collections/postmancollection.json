@@ -29,11 +29,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "www.google.be/search?q=test",
+					"raw": "{{url}}/search?q=test",
 					"host": [
-						"www",
-						"google",
-						"be"
+						"{{url}}"
 					],
 					"path": [
 						"search"
