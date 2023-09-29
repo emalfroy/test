@@ -30,6 +30,9 @@ jobs:
         run: |
           curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
           echo "env var ${{ vars.URLGOOGLE }}"
+          echo ${{ env.URLGOOGLE }}
+          echo ${{ secrets.URL }}
+          echo "done"
       - name: Login to Postman CLI
         id: loginpostman
         run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
