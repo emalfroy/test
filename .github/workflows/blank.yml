@@ -32,6 +32,7 @@ jobs:
           echo "env var ${{ vars.URLGOOGLE }}"
           echo ${{ env.URLGOOGLE }}
           echo ${{ secrets.URL }}
+          env
           echo "done"
       - name: Login to Postman CLI
         id: loginpostman
