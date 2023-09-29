@@ -25,16 +25,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
       # Runs postman tests
       - name: Run postman tests
         run: |
@@ -45,6 +35,6 @@ jobs:
       - name: Run API tests
         if: steps.loginpostman.outcome == 'success'
         run: |
-          postman collection run "${{ github.workspace }}/Postman Collections/postmancollection.json" --integration-id "149296-${{ github.run_id }}" --env-var "url=${{ secrets.URL }}"
+          postman collection run "${{ github.workspace }}/Postman Collections/postmancollection.json" --integration-id "149296-${{ github.run_id }}" --env-var "url=${{ env.URLGOOGLE }}"
           # Lint your API using Postman CLI
           postman api lint e7f2bd00-c422-4b73-baf9-20154cd17e59 --integration-id 149296
